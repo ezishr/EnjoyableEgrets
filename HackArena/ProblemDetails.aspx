@@ -1,10 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="HackArena.index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ProblemDetails.aspx.cs" Inherits="HackArena.ProblemDetails" %>
+
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Homepage</title>
+    <title></title>
     <link rel="stylesheet" type="text/css" href="~/Styles/styles.css">
 </head>
 <body>
