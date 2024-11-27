@@ -10,5 +10,25 @@ namespace HackArena.Models
 {
     public class TestCase
     {
+        private int _ProblemId;
+        public int ProblemId
+        {
+            get { return _ProblemId; }
+            set { _ProblemId = value; }
+        }
+
+        public int ProblemOrder { get; set; };
+        public string Input { get; set; };
+        public string Output { get; set; };
+        public string Explanation { get; set; };
+
+        public TestCase( int ProblemId, int ProblemOrder, string Input, string Output, string Explanation )
+        {
+            _ProblemId = ProblemId;
+            ProblemOrder = ProblemOrder;
+            Input = Input;
+            Output = Output;
+            Explanation = Explanation;
+        }
     }
 }

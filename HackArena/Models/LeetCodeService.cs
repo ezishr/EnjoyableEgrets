@@ -11,5 +11,45 @@ namespace HackArena.Models
 {
     public class LeetCodeService
     {
+        public readonly List<LeetCodeProblem> ProblemList = new List<LeetCodeProblem>
+        {
+            new LeetCodeProblem
+            {
+                // id goes here
+                // more info go here
+                TestCases = new List<TestCase>
+                {
+                    new TestCase
+                    {
+                        ProblemId = 1;
+                        ProblemOrder = 1;
+                        Input = "Empty for now";
+                        Output = "Empty for now";
+                        Explanation = "Empty for now";
+                    },
+
+                    new TestCase
+                    {
+                        ProblemId = 2;
+                        ProblemOrder = 2;
+                        Input = "Empty for now";
+                        Output = "Empty for now";
+                        Explanation = "Empty for now";
+                    },
+
+                }
+            }
+
+        };
+
+        public List<LeetCodeProblem> GetAllProblems()
+        {
+            return ProblemList;
+        };
+
+        public LeetCodeProblem GetProblemById(int ProblemId)
+        {
+            return ProblemList.FirstOrDefault(problem => problem.ID == ProblemId);
+        }
     }
 }
