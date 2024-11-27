@@ -9,9 +9,27 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            testing
+        <div class ="">
+            <asp:Menu ID="NavBar" runat="server" OnMenuItemClick="Menu1_MenuItemClick" CssClass="NavBar">
+                <Items>
+                    <asp:MenuItem Text="Explore" Value="Explore"></asp:MenuItem>
+                    <asp:MenuItem Text="Problems" Value="Problems"></asp:MenuItem>
+                    <asp:MenuItem Text="Discuss" Value="Discuss"></asp:MenuItem>
+                    <asp:MenuItem Text="Settings" Value="Settings"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
         </div>
+
+        <h2> Problem List </h2>
+
+        <div>
+            <asp:GridView ID="GridView1" runat="server">
+                <Columns>
+                    <!-- Column for Problem Title-->
+                </Columns>
+            </asp:GridView>
+        </div>
+
     </form>
 </body>
 </html>

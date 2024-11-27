@@ -14,5 +14,10 @@ namespace HackArena
         {
 
         }
+
+        protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
+        {
+
+        }
     }
 }
