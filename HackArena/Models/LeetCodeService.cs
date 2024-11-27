@@ -15,26 +15,57 @@ namespace HackArena.Models
         {
             new LeetCodeProblem
             {
-                // id goes here
-                // more info go here
+                ID = 1,
+                Title = "Empty",
+                Description = "Empty",
+                Solution = "Empty",
                 TestCases = new List<TestCase>
                 {
                     new TestCase
                     {
-                        ProblemId = 1;
-                        ProblemOrder = 1;
-                        Input = "Empty for now";
-                        Output = "Empty for now";
-                        Explanation = "Empty for now";
+                        _TestCaseId = 1,
+                        ProblemOrder = 1,
+                        Input = "Empty for now",
+                        Output = "Empty for now",
+                        Explanation = "Empty for now",
                     },
 
                     new TestCase
                     {
-                        ProblemId = 2;
-                        ProblemOrder = 2;
-                        Input = "Empty for now";
-                        Output = "Empty for now";
-                        Explanation = "Empty for now";
+                        _TestCaseId = 2,
+                        ProblemOrder = 2,
+                        Input = "Empty for now",
+                        Output = "Empty for now",
+                        Explanation = "Empty for now",
+                    },
+
+                }
+            },
+
+            new LeetCodeProblem
+            {
+                ID = 1,
+                Title = "Empty",
+                Description = "Empty",
+                Solution = "Empty",
+                TestCases = new List<TestCase>
+                {
+                    new TestCase
+                    {
+                        _TestCaseId = 1,
+                        ProblemOrder = 1,
+                        Input = "Empty for now",
+                        Output = "Empty for now",
+                        Explanation = "Empty for now",
+                    },
+
+                    new TestCase
+                    {
+                        _TestCaseId = 2,
+                        ProblemOrder = 2,
+                        Input = "Empty for now",
+                        Output = "Empty for now",
+                        Explanation = "Empty for now",
                     },
 
                 }
@@ -45,7 +76,7 @@ namespace HackArena.Models
         public List<LeetCodeProblem> GetAllProblems()
         {
             return ProblemList;
-        };
+        }
 
         public LeetCodeProblem GetProblemById(int ProblemId)
         {
