@@ -25,7 +25,6 @@
         <div>
             <asp:GridView ID="GridView1" runat="server">
                 <Columns>
-                    <!-- Column for Problem Title-->
                 </Columns>
             </asp:GridView>
         </div>
