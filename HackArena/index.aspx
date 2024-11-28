@@ -23,11 +23,24 @@
         <h2> Problem List </h2>
 
         <div>
-            <asp:GridView ID="GridView1" runat="server">
-                <Columns>
-                    <!-- Column for Problem Title-->
-                </Columns>
-            </asp:GridView>
+            <asp:GridView ID="ProblemGridView" runat="server" AutoGenerateColumns="false" CssClass="gridview" OnRowCommand="ProblemGridView_RowCommand">
+            <Columns>
+
+                <%--Column for Problem Title--%>
+                <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
+
+                <%--Column for Problem Title--%>
+                <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
+
+                <%--Column for Problem Title--%>
+                <asp:TemplateField HeaderText="Action">
+                    <ItemTemplate>
+                        <asp:Button ID="DetailsButton" runat="server" Text="View Details" CommandName="ViewDetails" CommandArgument='<%# Eval("ID") %>' />
+                    </ItemTemplate>
+                </asp:TemplateField>
+
+            </Columns>
+        </asp:GridView>
         </div>
 
     </form>
