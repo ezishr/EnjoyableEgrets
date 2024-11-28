@@ -1,0 +1,80 @@
+﻿
+/*Center the whole page with some empty space on the left and right*/
+form {
+    max-width: 1200px; /* Set a maximum width for the page */
+    margin: auto auto;
+    /*padding: 20px;*/ /* Add padding for spacing */
+    border: 2px solid black;
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Left section (Logo) */
+.navbar-left {
+    flex: 1; /* Takes up one part of the space */
+}
+
+.navbar-logo {
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Center section (Menu items) */
+.navbar-center {
+    flex: 2; /* Takes up two parts of the space */
+    text-align: center;
+}
+
+/* Right section (Log In/Sign Up) */
+.navbar-login {
+    flex: 1; /* Takes up one part of the space */
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em; /* Spacing between Sign In and Sign Up */
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: darkslategrey; /* Bootstrap blue */
+    font-weight: bold;
+}
+
+    .navbar-link:hover {
+        color: red;
+        text-decoration: underline;
+    }
+
+/* Menu styling */
+.NavBar {
+    display: inline-block; /* Prevent the Menu from taking the full width */
+}
+
+    .NavBar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 20px; /* Space between menu items */
+    }
+
+    .NavBar li {
+        display: inline;
+    }
+
+    .NavBar a { /* Need to fix */
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        padding: 5px 10px;
+    }
+
+        .NavBar a:hover {
+            text-decoration: underline;
+        }

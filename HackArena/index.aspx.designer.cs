@@ -24,21 +24,21 @@ namespace HackArena
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// NavBar control.
+        /// NavBarCenter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu NavBar;
+        protected global::System.Web.UI.WebControls.Menu NavBarCenter;
 
         /// <summary>
-        /// ProblemGridView control.
+        /// gvProblems control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView ProblemGridView;
+        protected global::System.Web.UI.WebControls.GridView gvProblems;
     }
 }
