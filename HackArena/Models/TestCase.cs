@@ -11,11 +11,7 @@ namespace HackArena.Models
     public class TestCase
     {
         public int _TestCaseId;
-        /*public int ProblemId
-        {
-            get { return _TestCaseId; }
-            set { _TestCaseId = value; }
-        }*/
+
 
         public int ProblemOrder { get; set; }
         public string Input { get; set; }
