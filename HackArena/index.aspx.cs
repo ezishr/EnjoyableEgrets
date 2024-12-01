@@ -1,10 +1,6 @@
-﻿using System;
+﻿using HackArena.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using HackArena.Models;
 
 namespace HackArena
 {
@@ -19,8 +15,14 @@ namespace HackArena
             {
                 gvProblems.DataSource = leetCodeService.GetAllProblems();
                 gvProblems.DataBind();
+
+                TrendingCompaniesRepeater.DataSource = new List<string>
+                {
+                    "Google", "Microsoft", "Amazon", "Apple", "Meta", "NVIDIA", "Goldman Sachs"
+                };
+                TrendingCompaniesRepeater.DataBind();
             }
         }
-        
+
     }
 }

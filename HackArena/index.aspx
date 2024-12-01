@@ -6,7 +6,7 @@
 <head runat="server">
     <title>Homepage</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"/>
-    <link rel="stylesheet" type="text/css" href="~\Styles\index.css">
+    <link rel="stylesheet" type="text/css" href="~/Styles\index.css">
 </head>
 <body>
     <form id="form1" runat="server" class="form-container">
@@ -66,7 +66,7 @@
 
                         </Columns>
                     </asp:GridView>
-                    </div>
+                </div>
             </div>
 
             <div class="column-right">
@@ -75,10 +75,42 @@
                     <asp:Calendar 
                         ID="CalendarControl" 
                         runat="server" 
-                        CssClass="calendar-control">
+                        CssClass="calendar-control" 
+                        BorderStyle="None">
+
+                        <TitleStyle CssClass="calendar-title" />
+                        <NextPrevStyle CssClass="calendar-hover" />
+                        <TodayDayStyle ForeColor="Green" />
+                        <WeekendDayStyle ForeColor="Red" />
+                        <DayStyle CssClass="calendar-hover" />
+
+                        <SelectedDayStyle
+                            BorderStyle="None" 
+                            ForeColor="#CC3399" />
+
                     </asp:Calendar>
                 </div>
+
+                <div class="trending-container">
+                    <h3>Trending Companies</h3>
+                    
+                    <input 
+                        type="text" 
+                        id="search-bar" 
+                        placeholder="Search Companies..."
+                        class="search-bar"
+                    />
+
+                    <asp:Repeater ID="TrendingCompaniesRepeater" runat="server">
+                        <ItemTemplate>
+                            <div class="company-item">
+                                <%# Container.DataItem %>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
             </div>
+
         </div>
 
     </form>
