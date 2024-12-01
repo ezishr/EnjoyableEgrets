@@ -23,7 +23,15 @@ namespace HackArena
                     // Populate the left column
                     lblProblemTitle.Text = $"Title: {problem.Title}";
                     lblProblemDescription.Text = $"Description: {problem.Description}";
-                    lblProblemTestCase.Text = $"Test Case: {problem.TestCases}";
+
+                    lblProblemTestCase.Text = "<h3>TestCases;</h3>";
+                    foreach (var testCase in problem.TestCases)
+                    {
+                        lblProblemTestCase.Text += $"<strong>Input:</strong> {testCase.Input}<br />";
+                        lblProblemTestCase.Text += $"<strong>Output:</strong> {testCase.Output}<br />";
+                        lblProblemTestCase.Text += $"<strong>Explanation:</strong> {testCase.Explanation}<br /><br />";
+                    }
+
                 }
             }
         }
