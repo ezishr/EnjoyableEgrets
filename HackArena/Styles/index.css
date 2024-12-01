@@ -1,9 +1,7 @@
 ﻿
-/*Center the whole page with some empty space on the left and right*/
-form {
-    max-width: 1200px; /* Set a maximum width for the page */
+.form-container {
+    max-width: 1000px;
     margin: auto auto;
-    /*padding: 20px;*/ /* Add padding for spacing */
     border: 2px solid black;
 }
 
@@ -53,7 +51,8 @@ form {
 
 /* Menu styling */
 .NavBar {
-    display: inline-block; /* Prevent the Menu from taking the full width */
+    display: flex; 
+    justify-content: center; 
 }
 
     .NavBar ul {
@@ -65,16 +64,60 @@ form {
     }
 
     .NavBar li {
-        display: inline;
+        display: inline; /* Inline layout for menu items */
     }
 
-    .NavBar a { /* Need to fix */
+    /* NOT WORKING */
+    .NavBar a {
         text-decoration: none;
-        color: black;
+        color: blue;
         font-weight: bold;
         padding: 5px 10px;
     }
 
         .NavBar a:hover {
             text-decoration: underline;
+            color: pink;
         }
+
+
+/*Problem Grid*/
+.problem-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.problem-grid .id-column {
+    width: 10%; /* 1 part */
+    text-align: center; /* Align ID values to center */
+}
+
+.problem-grid .title-column {
+    width: 40%; /* 2 parts */
+    text-align: left; /* Align text to the left */
+}
+
+.problem-grid .difficulty-column {
+    width: 40%; /* 2 parts */
+    text-align: left; /* Align text to the left */
+}
+
+.problem-grid {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+}
+
+    .problem-grid th, .problem-grid td {
+        padding: 8px;
+        border: 1px solid #ddd;
+    }
+
+    .problem-grid th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+
