@@ -18,10 +18,10 @@
             <div class="navbar-center">
                 <asp:Menu ID="NavBarCenter" runat="server" CssClass="NavBar" RenderingMode="List">
                     <Items>
-                        <asp:MenuItem Text="Explore" Value="Explore"></asp:MenuItem>
-                        <asp:MenuItem Text="Problems" Value="Problems"></asp:MenuItem>
-                        <asp:MenuItem Text="Discuss" Value="Discuss"></asp:MenuItem>
-                        <asp:MenuItem Text="Settings" Value="Settings"></asp:MenuItem>
+                        <asp:MenuItem Text="Explore" Value="Explore" NavigateUrl="~/index.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Problems" Value="Problems" NavigateUrl="~/index.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Discuss" Value="Discuss" NavigateUrl="~/index.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Settings" Value="Settings" NavigateUrl="~/index.aspx"></asp:MenuItem>
                     </Items>
                 </asp:Menu>
             </div>
@@ -32,38 +32,53 @@
             </div>
         </div>
 
-        <h2> Problem List </h2>
+        <div class="main-body">
+            <div class="column-left">
+                <h2> Problem List </h2>
 
-        <div class="problem-container">
-            <asp:GridView 
-                runat="server" 
-                ID="gvProblems" 
-                AutoGenerateColumns="False" 
-                DataKeyNames="ID" 
-                CssClass="problem-grid">
-                <Columns>
+                <div class="problem-container">
+                    <asp:GridView 
+                        runat="server" 
+                        ID="gvProblems" 
+                        AutoGenerateColumns="False" 
+                        DataKeyNames="ID" 
+                        CssClass="problem-grid">
+                        <Columns>
 
-                    <asp:BoundField DataField ="ID" HeaderText="ID">
-                        <ItemStyle CssClass="id-column" />
-                        <HeaderStyle CssClass="id-column" />
-                    </asp:BoundField>
+                            <asp:BoundField DataField ="ID" HeaderText="ID">
+                                <ItemStyle CssClass="id-column" />
+                                <HeaderStyle CssClass="id-column" />
+                            </asp:BoundField>
 
-                    <asp:HyperLinkField
-                        DataNavigateUrlFields="ID"
-                        DataNavigateUrlFormatString="ProblemDetails.aspx?ID={0}"
-                        DataTextField="Title"
-                        HeaderText="Title" >
-                        <ItemStyle CssClass="title-column" />
-                        <HeaderStyle CssClass="title-column" />
-                    </asp:HyperLinkField>
+                            <asp:HyperLinkField
+                                DataNavigateUrlFields="ID"
+                                DataNavigateUrlFormatString="ProblemDetails.aspx?ID={0}"
+                                DataTextField="Title"
+                                HeaderText="Title" >
+                                <ItemStyle CssClass="title-column" />
+                                <HeaderStyle CssClass="title-column" />
+                            </asp:HyperLinkField>
 
-                    <asp:BoundField DataField="Difficulty" HeaderText="Difficulty">
-                        <ItemStyle CssClass="difficulty-column" />
-                        <HeaderStyle CssClass="difficulty-column" />
-                    </asp:BoundField>
+                            <asp:BoundField DataField="Difficulty" HeaderText="Difficulty">
+                                <ItemStyle CssClass="difficulty-column" />
+                                <HeaderStyle CssClass="difficulty-column" />
+                            </asp:BoundField>
 
-                </Columns>
-            </asp:GridView>
+                        </Columns>
+                    </asp:GridView>
+                    </div>
+            </div>
+
+            <div class="column-right">
+                <div class="calendar-container">
+                    <h3>Calendar Track</h3>
+                    <asp:Calendar 
+                        ID="CalendarControl" 
+                        runat="server" 
+                        CssClass="calendar-control">
+                    </asp:Calendar>
+                </div>
+            </div>
         </div>
 
     </form>
