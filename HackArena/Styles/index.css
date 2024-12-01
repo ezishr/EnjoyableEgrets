@@ -1,0 +1,123 @@
+﻿
+.form-container {
+    max-width: 1000px;
+    margin: auto auto;
+    border: 2px solid black;
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Left section (Logo) */
+.navbar-left {
+    flex: 1; /* Takes up one part of the space */
+}
+
+.navbar-logo {
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Center section (Menu items) */
+.navbar-center {
+    flex: 2; /* Takes up two parts of the space */
+    text-align: center;
+}
+
+/* Right section (Log In/Sign Up) */
+.navbar-login {
+    flex: 1; /* Takes up one part of the space */
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em; /* Spacing between Sign In and Sign Up */
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: darkslategrey; /* Bootstrap blue */
+    font-weight: bold;
+}
+
+    .navbar-link:hover {
+        color: red;
+        text-decoration: underline;
+    }
+
+/* Menu styling */
+.NavBar {
+    display: flex; 
+    justify-content: center; 
+}
+
+    .NavBar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 20px; /* Space between menu items */
+    }
+
+    .NavBar li {
+        display: inline; /* Inline layout for menu items */
+    }
+
+    /* NOT WORKING */
+    .NavBar a {
+        text-decoration: none;
+        color: blue;
+        font-weight: bold;
+        padding: 5px 10px;
+    }
+
+        .NavBar a:hover {
+            text-decoration: underline;
+            color: pink;
+        }
+
+
+/*Problem Grid*/
+.problem-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.problem-grid .id-column {
+    width: 10%; /* 1 part */
+    text-align: center; /* Align ID values to center */
+}
+
+.problem-grid .title-column {
+    width: 40%; /* 2 parts */
+    text-align: left; /* Align text to the left */
+}
+
+.problem-grid .difficulty-column {
+    width: 40%; /* 2 parts */
+    text-align: left; /* Align text to the left */
+}
+
+.problem-grid {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+}
+
+    .problem-grid th, .problem-grid td {
+        padding: 8px;
+        border: 1px solid #ddd;
+    }
+
+    .problem-grid th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+

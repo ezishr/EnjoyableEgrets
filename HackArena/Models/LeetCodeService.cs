@@ -19,6 +19,7 @@ namespace HackArena.Models
                 Title = "Empty",
                 Description = "Empty",
                 Solution = "Empty",
+                Difficulty = "Easy",
                 TestCases = new List<TestCase>
                 {
                     new TestCase

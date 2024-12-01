@@ -10,14 +10,17 @@ namespace HackArena
 {
     public partial class index : System.Web.UI.Page
     {
+        /* Declare the list of problems from LeetCodeService class*/
+        LeetCodeService leetCodeService = new LeetCodeService();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                gvProblems.DataSource = leetCodeService.GetAllProblems();
+                gvProblems.DataBind();
+            }
         }
-
-        protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
-        {
-
-        }
+        
     }
 }
