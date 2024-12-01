@@ -7,10 +7,31 @@
 <head runat="server">
     <title></title>
     <link rel="stylesheet" type="text/css" href="~/Styles/styles.css"/>
-
+     <link rel="stylesheet" type="text/css" href="~/Styles/index.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
+                <div class ="navbar">
+            <div class="navbar-left">
+                <img src="/Images/navbar-logo.png" alt="NavBar Logo" class="navbar-logo"/>
+            </div>
+
+            <div class="navbar-center">
+                <asp:Menu ID="NavBarCenter" runat="server" CssClass="NavBar" RenderingMode="List">
+                    <Items>
+                        <asp:MenuItem Text="Explore" Value="Explore"></asp:MenuItem>
+                        <asp:MenuItem Text="Problems" Value="Problems"></asp:MenuItem>
+                        <asp:MenuItem Text="Discuss" Value="Discuss"></asp:MenuItem>
+                        <asp:MenuItem Text="Settings" Value="Settings"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+
+            <div class="navbar-login">
+                <a href="index.aspx" class="navbar-link">Log In</a>
+                <a href="index.aspx" class="navbar-link">Sign Up</a>
+            </div>
+        </div>
         <div class="container">
             <!-- Left Column -->
             <div class="left">
