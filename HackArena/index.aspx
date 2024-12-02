@@ -7,7 +7,18 @@
     <title>Homepage</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"/>
     <link rel="stylesheet" type="text/css" href="../Styles/index.css">
+
+    <%-- Import fonts: 
+        - Roboto Mono: normal text
+        - Martian Mono: header 1
+        - Chivo Mono: header 2
+        - Cutive Mono: solution code --%>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Cutive+Mono&family=Martian+Mono:wght@100..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+    </style>
+    
 </head>
+
 <body>
     <form id="form1" runat="server" class="form-container">
         <div class ="navbar">
@@ -42,12 +53,18 @@
                         ID="gvProblems" 
                         AutoGenerateColumns="False" 
                         DataKeyNames="ID" 
-                        CssClass="problem-grid">
+                        CssClass="problem-grid" 
+                        AlternatingRowStyle-BackColor="#E4E4E4" 
+                        GridLines="None">
                         <Columns>
 
                             <asp:BoundField DataField ="ID" HeaderText="ID">
-                                <ItemStyle CssClass="id-column" />
-                                <HeaderStyle CssClass="id-column" />
+                                <HeaderStyle 
+                                    CssClass="id-column" 
+                                    Font-Names="Chivo Mono" 
+                                    Font-Bold="True" 
+                                    BackColor="#E4E4E4"/>
+                                <ItemStyle CssClass="id-column" Font-Names="Roboto Mono" />
                             </asp:BoundField>
 
                             <asp:HyperLinkField
@@ -55,13 +72,21 @@
                                 DataNavigateUrlFormatString="ProblemDetails.aspx?ID={0}"
                                 DataTextField="Title"
                                 HeaderText="Title" >
-                                <ItemStyle CssClass="title-column" />
-                                <HeaderStyle CssClass="title-column" />
+                                <HeaderStyle 
+                                    CssClass="title-column"
+                                    Font-Bold="True" 
+                                    Font-Names="Chivo Mono"
+                                    BackColor="#E4E4E4"/>
+                                <ItemStyle CssClass="title-column" Font-Names="Roboto Mono" />
                             </asp:HyperLinkField>
 
                             <asp:BoundField DataField="Difficulty" HeaderText="Difficulty">
-                                <ItemStyle CssClass="difficulty-column" />
-                                <HeaderStyle CssClass="difficulty-column" />
+                                <HeaderStyle 
+                                    CssClass="difficulty-column" 
+                                    Font-Bold="True" 
+                                    Font-Names="Chivo Mono"
+                                    BackColor="#E4E4E4"/>
+                                <ItemStyle CssClass="difficulty-column" Font-Names="Roboto Mono" />
                             </asp:BoundField>
 
                         </Columns>
@@ -80,15 +105,15 @@
 
                         <TitleStyle CssClass="calendar-title" />
                         <NextPrevStyle CssClass="calendar-hover" />
-                        <DayHeaderStyle ForeColor="White" BackColor="#48DBAF" CssClass="calendar-days" />
+                        <DayHeaderStyle ForeColor="White" BackColor="#48DBAF" Font-Names="Chivo Mono" Font-Size="16px" />
 
-                        <TodayDayStyle ForeColor="Green" />
+                        <TodayDayStyle ForeColor="#006600" Font-Bold="True" Font-Size="20px" />
                         <WeekendDayStyle ForeColor="Red" />
-                        <DayStyle CssClass="calendar-hover" />
+                        <DayStyle CssClass="calendar-hover calendar-day" />
 
                         <SelectedDayStyle
                             BorderStyle="None" 
-                            ForeColor="#CC3399" />
+                            ForeColor="#CC3399" Font-Bold="True" Font-Size="20px" Font-Names="Roboto Mono" />
 
                     </asp:Calendar>
                 </div>
@@ -111,6 +136,7 @@
                         </ItemTemplate>
                     </asp:Repeater>
                 </div>
+
             </div>
 
         </div>

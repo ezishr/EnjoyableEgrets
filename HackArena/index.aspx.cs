@@ -18,7 +18,7 @@ namespace HackArena
 
                 TrendingCompaniesRepeater.DataSource = new List<string>
                 {
-                    "Google", "Microsoft", "Amazon", "Apple", "Meta", "NVIDIA", "Goldman Sachs"
+                    "Google", "Microsoft", "Amazon", "Apple", "Meta", "NVIDIA", "Goldman Sachs", "Bloomberg", "LinkedIn", "Citadel", "Uber", "SalesForce", "Snap", "Atlassian", "Oracle", "TikTok"
                 };
                 TrendingCompaniesRepeater.DataBind();
             }
