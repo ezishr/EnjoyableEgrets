@@ -6,7 +6,7 @@
 <head runat="server">
     <title>Homepage</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"/>
-    <link rel="stylesheet" type="text/css" href="~/Styles\index.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/index.css">
 </head>
 <body>
     <form id="form1" runat="server" class="form-container">
@@ -80,6 +80,8 @@
 
                         <TitleStyle CssClass="calendar-title" />
                         <NextPrevStyle CssClass="calendar-hover" />
+                        <DayHeaderStyle ForeColor="White" BackColor="#48DBAF" CssClass="calendar-days" />
+
                         <TodayDayStyle ForeColor="Green" />
                         <WeekendDayStyle ForeColor="Red" />
                         <DayStyle CssClass="calendar-hover" />

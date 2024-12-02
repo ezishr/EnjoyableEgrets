@@ -176,6 +176,9 @@ h2 {
     transition: box-shadow 0.3s ease-in-out;
 }
 
+.calendar-days {
+    text-transform: lowercase;
+}
 
 
 /* Calendar Header (Month and Year) */
@@ -183,15 +186,6 @@ h2 {
     border-collapse: collapse;
     margin: 0 0;
 }
-
-    .calendar-control th { /* Table Headers (the names of the days: Sun, Mon, etc.)*/
-        margin: 0 0;
-        background-color: darkgrey; /* Green background for header */
-        border: none;
-        padding: 10px;
-        color: white;
-        text-transform: uppercase;
-    }
 
 /* Calendar Days. This class is for each clickable day of the month. */
     .calendar-control td {
