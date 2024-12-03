@@ -57,11 +57,11 @@
                         GridLines="None">
                         <Columns>
 
-                            <asp:BoundField DataField ="ID" HeaderText="ID">
+                            <asp:BoundField DataField ="ID" HeaderText="ID"> 
                                 <HeaderStyle 
                                     CssClass="id-column" 
                                     Font-Names="Chivo Mono" 
-                                    Font-Bold="True" 
+                                    Font-Bold="True"
                                     BackColor="#E4E4E4"/>
                                 <ItemStyle CssClass="id-column" Font-Names="Roboto Mono" />
                             </asp:BoundField>
