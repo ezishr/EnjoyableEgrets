@@ -12,26 +12,28 @@ namespace HackArena
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (!IsPostBack)
             {
                 LeetCodeService leetCodeService = new LeetCodeService();
-                // Assume the first problem is selected for simplicity
-                var problem = leetCodeService.ProblemList.FirstOrDefault();
-                if (problem != null)
+
+                // Get the problem ID from the query string
+                if (int.TryParse(Request.QueryString["ID"], out int problemId))
                 {
-                    // Populate the left column
-                    lblProblemTitle.Text = $"Title: {problem.Title}";
-                    lblProblemDescription.Text = $"Description: {problem.Description}";
+                    var problem = leetCodeService.GetProblemById(problemId);
 
-                    lblProblemTestCase.Text = "<h3>TestCases;</h3>";
-                    foreach (var testCase in problem.TestCases)
+                    if (problem != null)
                     {
-                        lblProblemTestCase.Text += $"<strong>Input:</strong> {testCase.Input}<br />";
-                        lblProblemTestCase.Text += $"<strong>Output:</strong> {testCase.Output}<br />";
-                        lblProblemTestCase.Text += $"<strong>Explanation:</strong> {testCase.Explanation}<br /><br />";
+                        // Populate the left column
+                        lblProblemTitle.Text = $"Title: {problem.Title}";
+                        lblProblemDescription.Text = $"Description: {problem.Description}";
+                        lblProblemTestCase.Text = "<h3>TestCases:</h3>";
+                        foreach (var testCase in problem.TestCases)
+                        {
+                            lblProblemTestCase.Text += $"<strong>Input:</strong> {testCase.Input}<br />";
+                            lblProblemTestCase.Text += $"<strong>Output:</strong> {testCase.Output}<br />";
+                            lblProblemTestCase.Text += $"<strong>Explanation:</strong> {testCase.Explanation}<br /><br />";
+                        }
                     }
-
                 }
             }
         }
@@ -40,15 +42,18 @@ namespace HackArena
         {
             LeetCodeService leetCodeService = new LeetCodeService();
 
-            // Fetch the solution for the currently displayed problem
-            var problem = leetCodeService.ProblemList.FirstOrDefault();
-
-            if (problem != null)
+            // Get the problem ID from the query string
+            if (int.TryParse(Request.QueryString["ID"], out int problemId))
             {
-                // Show the solution in the hidden textbox
-                txtActualSolution.Visible = true;
-                txtActualSolution.Text = problem.Solution;
+                var problem = leetCodeService.GetProblemById(problemId);
+
+                if (problem != null)
+                {
+                    // Show the solution in the hidden textbox
+                    txtActualSolution.Visible = true;
+                    txtActualSolution.Text = problem.Solution;
+                }
             }
         }
     }
-}
+    }
