@@ -25,13 +25,15 @@ namespace HackArena
                     {
                         // Populate the left column
                         lblProblemTitle.Text = $"Title: {problem.Title}";
-                        lblProblemDescription.Text = $"Description: {problem.Description}";
-                        lblProblemTestCase.Text = "<h3>TestCases:</h3>";
+                        lblProblemDescription.Text = "Description: <br />";
+                        lblProblemDescription.Text += $"<span style='font-family: Roboto Mono, monospace; font-weight: normal'>{problem.Description}</span>";
+                        lblProblemTestCase.Text = "Test Cases: <br />";
                         foreach (var testCase in problem.TestCases)
                         {
-                            lblProblemTestCase.Text += $"<strong>Input:</strong> {testCase.Input}<br />";
-                            lblProblemTestCase.Text += $"<strong>Output:</strong> {testCase.Output}<br />";
-                            lblProblemTestCase.Text += $"<strong>Explanation:</strong> {testCase.Explanation}<br /><br />";
+                            lblProblemTestCase.Text += $"<span style='font-family: Roboto Mono, monospace; font-weight: normal'><strong>Case:</strong> {testCase.TestCaseId} </span><br />";
+                            lblProblemTestCase.Text += $"<span style='font-family: Roboto Mono, monospace; font-weight: normal'><strong>Input:</strong> {testCase.Input} </span><br />";
+                            lblProblemTestCase.Text += $"<span style='font-family: Roboto Mono, monospace; font-weight: normal'><strong>Output:</strong> {testCase.Output} </span><br />";
+                            lblProblemTestCase.Text += $"<span style='font-family: Roboto Mono, monospace; font-weight: normal'><strong>Explanation:</strong> {testCase.Explanation} </span><br /><br />";
                         }
                     }
                 }
@@ -56,4 +58,4 @@ namespace HackArena
             }
         }
     }
-    }
+}
