@@ -1,8 +1,8 @@
 ﻿
 .form-container {
-    max-width: 1000px;
+    max-width: 1300px;
     margin: auto auto;
-    border: 2px solid black;
+/*    border: 2px solid black;*/
 }
 
 /* Navbar container */
@@ -16,7 +16,7 @@
 
 /* Left section (Logo) */
 .navbar-left {
-    flex: 1; /* Takes up one part of the space */
+    flex: 1;
 }
 
 .navbar-logo {
@@ -26,26 +26,27 @@
 
 /* Center section (Menu items) */
 .navbar-center {
-    flex: 2; /* Takes up two parts of the space */
+    flex: 2; 
     text-align: center;
 }
 
 /* Right section (Log In/Sign Up) */
 .navbar-login {
-    flex: 1; /* Takes up one part of the space */
+    flex: 1;
     display: flex;
     justify-content: flex-end;
-    gap: 1em; /* Spacing between Sign In and Sign Up */
+    gap: 1em;
 }
 
 .navbar-link {
     text-decoration: none;
-    color: darkslategrey; /* Bootstrap blue */
-    font-weight: bold;
+    color: black;
+    font-family: "Chivo Mono", sans-serif;
+    font-size: 18px;
 }
 
     .navbar-link:hover {
-        color: red;
+        color: #48DBAF; /*Same color as logo*/
         text-decoration: underline;
     }
 
@@ -67,27 +68,36 @@
         display: inline; /* Inline layout for menu items */
     }
 
-    /* NOT WORKING */
     .NavBar a {
         text-decoration: none;
-        color: blue;
-        font-weight: bold;
+        color: black;
+        font-family: "Chivo Mono", sans-serif;
+        font-size: 18px;
         padding: 5px 10px;
     }
 
         .NavBar a:hover {
             text-decoration: underline;
-            color: pink;
+            color: #48DBAF; /*Same color as logo*/
         }
+
+
+h2 {
+    margin-top: 20px;
+    font-family: "Martian Mono", sans-serif;
+}
+
+
+
+
+
+
 
 
 /*Problem Grid*/
 .problem-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 20px auto;
-    width: 80%;
+    width: 100%;
 }
 
 .problem-grid .id-column {
@@ -100,10 +110,20 @@
     text-align: left; /* Align text to the left */
 }
 
-.problem-grid .difficulty-column {
-    width: 40%; /* 2 parts */
-    text-align: left; /* Align text to the left */
+.title-column a {
+    color: black;
+    text-decoration: none;
 }
+
+    .title-column a:hover {
+        color: #48DBAF;
+        text-decoration: underline;
+    }
+
+    .problem-grid .difficulty-column {
+        width: 40%; /* 2 parts */
+        text-align: left; /* Align text to the left */
+    }
 
 .problem-grid {
     border-collapse: collapse;
@@ -113,7 +133,6 @@
 
     .problem-grid th, .problem-grid td {
         padding: 8px;
-        border: 1px solid #ddd;
     }
 
     .problem-grid th {
@@ -121,3 +140,159 @@
         font-weight: bold;
     }
 
+
+
+
+
+
+/*MAIN BODY*/
+.main-body {
+    display: flex;
+    justify-content: space-between;
+    align-content: start;
+    margin: 50px;
+    gap: 10px;
+}
+
+.column-left {
+    flex: 4;
+}
+
+.column-right {
+    flex: 1;
+}
+
+.calendar-container { /* The biggest container outside the Calendar*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+    .calendar-container h3 { /*H3*/
+        margin-bottom: 10px;
+        font-family: "Martian Mono", sans-serif;
+        font-size: 16px;
+    }
+
+.calendar-control {
+    transform: scale(0.8);
+    transform-origin: top;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+
+/* Calendar Header (Month and Year) */
+.calendar-control table {
+    border-collapse: collapse;
+    margin: 0 0;
+}
+
+/* Calendar Days. This class is for each clickable day of the month. */
+    .calendar-control td {
+        margin: 0 0;
+        padding: 10px;
+        border: none;
+        border-radius: 15px;
+        text-align: center;
+        vertical-align: middle !important;
+        font-size: 18px;
+        color: black;
+        background-color: white !important;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+.calendar-title tbody {
+    font-family: "Chivo Mono", sans-serif;
+}
+    .calendar-title tbody:hover {
+        background-color: white;
+    }
+
+.calendar-hover:hover {
+    background-color: #b1b1b1 !important;
+}
+
+.calendar-day {
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 16px;
+}
+
+/* Calendar Navigation (Prev/Next) */
+.calendar-control a {
+    text-decoration: none;
+}
+
+/*COMPANIES*/
+.trending-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.trending-container:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.trending-container h3 {
+    font-family: "Martian Mono", sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 15px auto;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    display: block;
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+
+    .search-bar:focus {
+        border-color: #48DBAF; /*Same color as logo*/
+    }
+
+.company-item {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 25px;
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .company-item:hover {
+        background-color: #48DBAF; /*Same color as logo*/
+        color: white;
+    }
+
+@media (max-width: 768px) {
+    .search-bar {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .company-item {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}
