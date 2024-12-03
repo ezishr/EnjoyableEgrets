@@ -24,7 +24,7 @@ namespace HackArena.Models
                 {
                     new TestCase
                     {
-                        _TestCaseId = 1,
+                        TestCaseId = 1,
                         ProblemOrder = 1,
                         Input = "Empty for now",
                         Output = "Empty for now",
@@ -33,7 +33,7 @@ namespace HackArena.Models
 
                     new TestCase
                     {
-                        _TestCaseId = 2,
+                        TestCaseId = 2,
                         ProblemOrder = 2,
                         Input = "Empty for now",
                         Output = "Empty for now",
@@ -53,7 +53,7 @@ namespace HackArena.Models
                 {
                     new TestCase
                     {
-                        _TestCaseId = 1,
+                        TestCaseId = 1,
                         ProblemOrder = 1,
                         Input = "Empty for now",
                         Output = "Empty for now",
@@ -62,7 +62,7 @@ namespace HackArena.Models
 
                     new TestCase
                     {
-                        _TestCaseId = 2,
+                        TestCaseId = 2,
                         ProblemOrder = 2,
                         Input = "Empty for now",
                         Output = "Empty for now",
