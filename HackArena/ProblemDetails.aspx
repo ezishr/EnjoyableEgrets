@@ -61,7 +61,9 @@
             <!-- Left Column -->
             <div class="left">
                 <h2>Problem Details</h2>
-
+                <button class="info-button">Hard</button>
+                <button class="info-button">Topic</button>
+                <br />
 
 
                 <asp:Label 
