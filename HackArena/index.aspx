@@ -11,7 +11,7 @@
 --%>
 
 
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="EnjoyableEgrets.index" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="HackArena.index" %>
 
 <!DOCTYPE html>
 
