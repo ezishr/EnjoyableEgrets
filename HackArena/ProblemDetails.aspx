@@ -36,8 +36,6 @@
             <!-- Left Column -->
             <div class="left">
                 <h2>Problem Details</h2>
-                <button class="info-button">Difficulty</button>
-                <button class="info-button">Topic</button>
                 <asp:Label ID="lblProblemTitle" runat="server" Text="Title: " Font-Bold="True"></asp:Label><br /><br />
                 <asp:Label ID="lblProblemDescription" runat="server" Text="Description: "></asp:Label><br /><br />
                 <asp:Label ID="lblProblemTestCase" runat="server" Text="Test Case: "></asp:Label>
