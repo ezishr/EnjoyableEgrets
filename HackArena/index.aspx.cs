@@ -17,7 +17,7 @@ using EnjoyableEgrets.Models;
 using System;
 using System.Collections.Generic;
 
-namespace EnjoyableEgrets
+namespace HackArena
 {
     public partial class index : System.Web.UI.Page
     {
