@@ -61,8 +61,8 @@
             <!-- Left Column -->
             <div class="left">
                 <h2>Problem Details</h2>
-                <button class="info-button">Hard</button>
-                <button class="info-button">Topic</button>
+                <button class="top-button">Hard</button>
+                <button class="top-button">Topic</button>
                 <br />
 
 
@@ -106,9 +106,6 @@
             <!-- Right Column -->
             <div class="right">
                 <h2>Submit Your Solution</h2>
-
-
-
                 <asp:TextBox 
                     ID="txtUserSolution" 
                     runat="server" 
@@ -121,7 +118,10 @@
                     ID="btnShowSolution" 
                     runat="server" 
                     Text="Show Solution" 
-                    OnClick="btnShowSolution_Click" />
+                    OnClick="btnShowSolution_Click" 
+                    Font-Names="Chivo Mono" 
+                    BackColor="#48DBAF" 
+                    ForeColor="White" Font-Size="16px" />
                 <asp:TextBox 
                     ID="txtActualSolution" 
                     runat="server" 
