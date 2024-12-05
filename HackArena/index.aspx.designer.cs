@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EnjoyableEgrets
+namespace HackArena
 {
 
 
