@@ -30,7 +30,7 @@ namespace HackArena
                         lblProblemTestCase.Text = "Test Cases: <br />";
                         foreach (var testCase in problem.TestCases)
                         {
-                            lblProblemTestCase.Text += $"<span style='font-family: Roboto Mono, monospace; font-weight: normal'><strong>Case:</strong> {testCase.TestCaseId} </span><br />";
+                            lblProblemTestCase.Text += $"<span style='font-family: Roboto Mono, monospace; font-weight: normal'><strong>Case:</strong> {testCase.ProblemOrder} </span><br />";
                             lblProblemTestCase.Text += $"<span style='font-family: Roboto Mono, monospace; font-weight: normal'><strong>Input:</strong> {testCase.Input} </span><br />";
                             lblProblemTestCase.Text += $"<span style='font-family: Roboto Mono, monospace; font-weight: normal'><strong>Output:</strong> {testCase.Output} </span><br />";
                             lblProblemTestCase.Text += $"<span style='font-family: Roboto Mono, monospace; font-weight: normal'><strong>Explanation:</strong> {testCase.Explanation} </span><br /><br />";

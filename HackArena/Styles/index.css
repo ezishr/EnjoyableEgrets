@@ -1,4 +1,16 @@
-﻿
+﻿/*
+    * Name: Enjoyable Egrets
+    * Email: vopq@mail.uc.edu
+    * Assignment Number: Final Project
+    * Due Date: Dec 5th, 2024
+    * Course #/Section: IS 3050 - 002
+    * Semester/Year: Fall 2024
+    * Brief Description of the assignment: Build a website that shows a list of LeetCode problems and allows users to invoke the solutions.
+    * Citations: ChatGPT; https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.webcontrols?view=netframework-4.8.1
+    * Anything else that's relevant: N/A
+*/
+
+
 .form-container {
     max-width: 1300px;
     margin: auto auto;
@@ -89,11 +101,7 @@ h2 {
 
 
 
-
-
-
-
-/*Problem Grid*/
+/* PROBLEM GRID */
 .problem-container {
     margin: 20px auto;
     width: 100%;
@@ -142,8 +150,6 @@ h2 {
 
 
 
-
-
 /*MAIN BODY*/
 .main-body {
     display: flex;
@@ -152,28 +158,23 @@ h2 {
     margin: 50px;
     gap: 10px;
 }
-
 .column-left {
     flex: 4;
 }
-
 .column-right {
     flex: 1;
 }
-
 .calendar-container { /* The biggest container outside the Calendar*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     text-align: center;
 }
-
     .calendar-container h3 { /*H3*/
         margin-bottom: 10px;
         font-family: "Martian Mono", sans-serif;
         font-size: 16px;
     }
-
 .calendar-control {
     transform: scale(0.8);
     transform-origin: top;
@@ -182,7 +183,6 @@ h2 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: box-shadow 0.3s ease-in-out;
 }
-
 
 /* Calendar Header (Month and Year) */
 .calendar-control table {
@@ -204,18 +204,15 @@ h2 {
         cursor: pointer;
         transition: background-color 0.3s ease;
     }
-
 .calendar-title tbody {
     font-family: "Chivo Mono", sans-serif;
 }
     .calendar-title tbody:hover {
         background-color: white;
     }
-
 .calendar-hover:hover {
     background-color: #b1b1b1 !important;
 }
-
 .calendar-day {
     font-family: "Roboto Mono", sans-serif;
     font-size: 16px;
@@ -226,7 +223,10 @@ h2 {
     text-decoration: none;
 }
 
-/*COMPANIES*/
+
+
+
+/* TRENDING COMPANIES */
 .trending-container {
     width: 80%;
     margin: 0 auto;
@@ -237,18 +237,15 @@ h2 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: box-shadow 0.3s ease-in-out;
 }
-
 .trending-container:hover {
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
-
 .trending-container h3 {
     font-family: "Martian Mono", sans-serif;
     font-size: 16px;
     margin-bottom: 15px;
     text-align: center;
 }
-
 .search-bar {
     width: 100%;
     max-width: 300px;
@@ -261,11 +258,9 @@ h2 {
     font-size: 14px;
     outline: none;
 }
-
     .search-bar:focus {
         border-color: #48DBAF; /*Same color as logo*/
     }
-
 .company-item {
     display: inline-block;
     padding: 5px 10px;
@@ -278,20 +273,7 @@ h2 {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
     .company-item:hover {
         background-color: #48DBAF; /*Same color as logo*/
         color: white;
     }
-
-@media (max-width: 768px) {
-    .search-bar {
-        width: 100%;
-        max-width: 250px;
-    }
-
-    .company-item {
-        font-size: 12px;
-        padding: 8px 16px;
-    }
-}

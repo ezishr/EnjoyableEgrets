@@ -1,17 +1,27 @@
-﻿using System;
+﻿/*
+    *Name: Enjoyable Egrets
+    * Email: vopq @mail.uc.edu
+    * Assignment Number: Final Project
+    * Due Date: Dec 5th, 2024
+    * Course #/Section: IS 3050 - 002
+    * Semester/Year: Fall 2024
+    * Brief Description of the assignment: Build a website that shows a list of LeetCode problems and allows users to invoke the solutions.
+    * Citations: ChatGPT; https://www.geeksforgeeks.org/c-sharp-list-class/
+    *Anything else that's relevant: N/A
+*/
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 // This class is used to store the information of a LeetCode problems.
-// Have a list named _problems to store the problems.
-// Have a method named GetAllProblems to return the list of problems.
-// Have a method named GetProblemById to return a problem by its id.
 namespace HackArena.Models
 {
     public class LeetCodeService
     {
-        public readonly List<LeetCodeProblem> ProblemList = new List<LeetCodeProblem>
+        public readonly List<LeetCodeProblem> ProblemList = new List<LeetCodeProblem> // A list of problems with each problem being an object of LeetCodeProblem class
         {
             new LeetCodeProblem
             {
@@ -71,11 +81,10 @@ namespace HackArena.Models
                     }
                 }",
                 Difficulty = "Hard",
-                TestCases = new List<TestCase>
+                TestCases = new List<TestCase> // A list of test cases with each test case being an object of TestCase class
                 {
                     new TestCase
                     {
-                        TestCaseId = 11,
                         ProblemOrder = 1,
                         Input = "4",
                         Output = "2",
@@ -84,7 +93,6 @@ namespace HackArena.Models
 
                     new TestCase
                     {
-                        TestCaseId = 22,
                         ProblemOrder = 2,
                         Input = "8",
                         Output = "92",
@@ -177,7 +185,6 @@ namespace HackArena.Models
                 {
                     new TestCase
                     {
-                        TestCaseId = 33,
                         ProblemOrder = 1,
                         Input = "words = [\"This\", \"is\", \"an\", \"example\", \"of\", \"text\", \"justification.\"], maxWidth = 16",
                         Output = "[\"This    is    an\", \"example  of text\", \"justification.  \"]",
@@ -186,7 +193,6 @@ namespace HackArena.Models
 
                     new TestCase
                     {
-                        TestCaseId = 44,
                         ProblemOrder = 2,
                         Input = "words = [\"What\", \"must\", \"be\", \"acknowledgment\", \"shall\", \"be\"], maxWidth = 16",
                         Output = "[\"What   must   be\", \"acknowledgment  \", \"shall be        \"]",
@@ -243,7 +249,6 @@ namespace HackArena.Models
                 {
                     new TestCase
                     {
-                        TestCaseId = 55,
                         ProblemOrder = 1,
                         Input = "ratings = [1, 0, 2]",
                         Output = "5",
@@ -252,7 +257,6 @@ namespace HackArena.Models
 
                     new TestCase
                     {
-                        TestCaseId = 66,
                         ProblemOrder = 2,
                         Input = "ratings = [1, 2, 2]",
                         Output = "4",
@@ -322,7 +326,6 @@ namespace HackArena.Models
                 {
                     new TestCase
                     {
-                        TestCaseId = 77,
                         ProblemOrder = 1,
                         Input = "\"2\"",
                         Output = "true",
@@ -331,7 +334,6 @@ namespace HackArena.Models
 
                     new TestCase
                     {
-                        TestCaseId = 88,
                         ProblemOrder = 2,
                         Input = "\"1e\"",
                         Output = "false",
@@ -344,11 +346,20 @@ namespace HackArena.Models
 
         };
 
+        /// <summary>
+        /// Method to get all the LeetCode problems
+        /// </summary>
+        /// <returns>A list of LeetCode problems</returns>
         public List<LeetCodeProblem> GetAllProblems()
         {
             return ProblemList;
         }
 
+        /// <summary>
+        /// Method to get a specific LeetCode problem by its ID
+        /// </summary>
+        /// <param name="ProblemId">Unique ID of the selected problem</param>
+        /// <returns>The LeetCodeProblem object of the problem with according ID</returns>
         public LeetCodeProblem GetProblemById(int ProblemId)
         {
             return ProblemList.FirstOrDefault(problem => problem.ID == ProblemId);
