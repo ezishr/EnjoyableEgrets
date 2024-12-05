@@ -1,6 +1,6 @@
 ﻿/*
-    *Name: Enjoyable Egrets
-    * Email: vopq @mail.uc.edu
+    * Name: Enjoyable Egrets
+    * Email: vopq@mail.uc.edu, cadetce@mail.uc.edu, yemaneag@mail.uc.edu, hossaizn@mail.uc.edu
     * Assignment Number: Final Project
     * Due Date: Dec 5th, 2024
     * Course #/Section: IS 3050 - 002

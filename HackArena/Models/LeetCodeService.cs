@@ -1,12 +1,12 @@
 ﻿/*
-    *Name: Enjoyable Egrets
-    * Email: vopq @mail.uc.edu
+    * Name: Enjoyable Egrets
+    * Email: vopq@mail.uc.edu, cadetce@mail.uc.edu, yemaneag@mail.uc.edu, hossaizn@mail.uc.edu
     * Assignment Number: Final Project
     * Due Date: Dec 5th, 2024
     * Course #/Section: IS 3050 - 002
     * Semester/Year: Fall 2024
     * Brief Description of the assignment: Build a website that shows a list of LeetCode problems and allows users to invoke the solutions.
-    * Citations: ChatGPT; https://www.geeksforgeeks.org/c-sharp-list-class/
+    * Citations: ChatGPT; https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.webcontrols?view=netframework-4.8.1 
     *Anything else that's relevant: N/A
 */
 
