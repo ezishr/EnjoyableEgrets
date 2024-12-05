@@ -9,8 +9,8 @@
     * Citations: ChatGPT; https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.webcontrols?view=netframework-4.8.1 
     *Anything else that's relevant: N/A
 */
-    
-using HackArena.Models;
+
+using EnjoyableEgrets.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +18,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace HackArena
+namespace EnjoyableEgrets
 {
     public partial class ProblemDetails : System.Web.UI.Page
     {

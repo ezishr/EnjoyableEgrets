@@ -13,11 +13,11 @@
 
 using System.Security.Cryptography;
 using System.Xml.Linq;
-using HackArena.Models;
+using EnjoyableEgrets.Models;
 using System;
 using System.Collections.Generic;
 
-namespace HackArena
+namespace EnjoyableEgrets
 {
     public partial class index : System.Web.UI.Page
     {
