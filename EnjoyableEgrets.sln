@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnjoyableEgrets", "HackArena\EnjoyableEgrets.csproj", "{0C234403-85C1-41E7-86C3-110C4A94A1D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackArena", "HackArena\HackArena.csproj", "{0C234403-85C1-41E7-86C3-110C4A94A1D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
