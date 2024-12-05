@@ -17,7 +17,7 @@ using System.Linq;
 using System.Web;
 
 // This class is used to store the information of a LeetCode problems.
-namespace EnjoyableEgrets.Models
+namespace HackArena.Models
 {
     public class LeetCodeService
     {
