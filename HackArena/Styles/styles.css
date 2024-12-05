@@ -1,6 +1,18 @@
-﻿
+﻿/*
+    * Name: Enjoyable Egrets
+    * Email: vopq@mail.uc.edu, cadetce@mail.uc.edu, yemaneag@mail.uc.edu, hossaizn@mail.uc.edu
+    * Assignment Number: Final Project
+    * Due Date: Dec 5th, 2024
+    * Course #/Section: IS 3050 - 002
+    * Semester/Year: Fall 2024
+    * Brief Description of the assignment: Build a website that shows a list of LeetCode problems and allows users to invoke the solutions.
+    * Citations: ChatGPT;
+    *Anything else that's relevant: N/A
+*/
+
+
 body {
-    font-family: 'Arial';
+    font-family: 'Arial', sans-serif;   /*If Arial isnt available than program will set to any generic sans-serif font*/
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
@@ -46,27 +58,4 @@ body {
     align-items: center;
     padding: 15px 30px;
     border-bottom: 2px solid #ddd;
-
-/* Styling for the buttons */
-.buttons-container {
-    display: flex;
-    gap: 10px; /* Space between the buttons */
-    margin-top: 10px; /* Space above the buttons */
-    margin-bottom: 20px; /* Space between the buttons and labels below */
 }
-
-.info-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #3498db; /* Blue background */
-    color: white; /* White text */
-    border: none;
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth color transition */
-}
-
-    /* Hover effect */
-    .info-button:hover {
-        background-color: #2980b9; /* Darker blue on hover */
-    }
