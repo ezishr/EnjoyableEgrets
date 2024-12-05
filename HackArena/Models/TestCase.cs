@@ -17,7 +17,7 @@ using System.Linq;
 using System.Web;
 
 // This class is used to store the information of a test case of a problem.
-namespace EnjoyableEgrets.Models
+namespace HackArena.Models
 {
     public class TestCase
     {
